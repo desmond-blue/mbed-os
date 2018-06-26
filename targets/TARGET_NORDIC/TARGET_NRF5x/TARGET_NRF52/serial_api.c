@@ -56,8 +56,8 @@
 
 
 /***
- *       _____             __ _                       _   _             
- *      / ____|           / _(_)                     | | (_)            
+ *       _____             __ _                       _   _
+ *      / ____|           / _(_)                     | | (_)
  *     | |     ___  _ __ | |_ _  __ _ _   _ _ __ __ _| |_ _  ___  _ __  
  *     | |    / _ \| '_ \|  _| |/ _` | | | | '__/ _` | __| |/ _ \| '_ \ 
  *     | |___| (_) | | | | | | | (_| | |_| | | | (_| | |_| | (_) | | | |
@@ -137,27 +137,28 @@
  *        | | | | | '_ \ / _ \/ _` |/ _ \  _/ __|
  *        | | |_| | |_) |  __/ (_| |  __/ | \__ \
  *        |_|\__, | .__/ \___|\__,_|\___|_| |___/
- *            __/ | |                            
+ *            __/ | |
  *           |___/|_|                            
  */
 
 /**
  * Missing event typedefs.
  */
+// Mbed - only one is missing for SDK 15.0
 typedef enum
 {
-    NRF_UARTE_EVENT_RXDRDY    = offsetof(NRF_UARTE_Type, EVENTS_RXDRDY),
+//    NRF_UARTE_EVENT_RXDRDY    = offsetof(NRF_UARTE_Type, EVENTS_RXDRDY),
     NRF_UARTE_EVENT_TXDRDY    = offsetof(NRF_UARTE_Type, EVENTS_TXDRDY),
 } nrf_uarte_event_extra_t;
 
 /**
  * Missing interrupt masks.
  */
-typedef enum
-{
-    NRF_UARTE_INT_RXDRDY_MASK = UARTE_INTENSET_RXDRDY_Msk,
-    NRF_UARTE_INT_TXDRDY_MASK = UARTE_INTENSET_TXDRDY_Msk,
-} nrf_uarte_int_mask_extra_t;
+//typedef enum
+//{
+//    NRF_UARTE_INT_RXDRDY_MASK = UARTE_INTENSET_RXDRDY_Msk,
+//    NRF_UARTE_INT_TXDRDY_MASK = UARTE_INTENSET_TXDRDY_Msk,
+//} nrf_uarte_int_mask_extra_t;
 
 /**
  * Internal struct for storing each UARTE instance's state:
