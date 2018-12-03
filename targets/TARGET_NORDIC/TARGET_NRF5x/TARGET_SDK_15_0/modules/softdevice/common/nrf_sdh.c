@@ -229,6 +229,11 @@ ret_code_t nrf_sdh_enable_request(void)
         .accuracy     = NRF_SDH_CLOCK_LF_ACCURACY
     };
 
+    /* FIXME: This should be deleted when sd_state_evt_handler is ported. If not do this, softdevice is not able to enable*/
+#ifdef SOFTDEVICE_PRESENT
+    NVIC_DisableIRQ(POWER_CLOCK_IRQn);
+#endif
+
     CRITICAL_REGION_ENTER();
 #ifdef ANT_LICENSE_KEY
     ret_code = sd_softdevice_enable(&clock_lf_cfg, app_error_fault_handler, ANT_LICENSE_KEY);
@@ -237,6 +242,10 @@ ret_code_t nrf_sdh_enable_request(void)
 #endif
     m_nrf_sdh_enabled = (ret_code == NRF_SUCCESS);
     CRITICAL_REGION_EXIT();
+
+#ifdef SOFTDEVICE_PRESENT
+    NVIC_EnableIRQ(POWER_CLOCK_IRQn);
+#endif
 
     if (ret_code != NRF_SUCCESS)
     {

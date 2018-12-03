@@ -28,8 +28,8 @@
 /* If softdevice is present, set aside space for it */
 #if !defined(MBED_RAM_START)
   #if defined(SOFTDEVICE_PRESENT)
-    #define MBED_RAM_START  0x20003188
-    #define MBED_RAM_SIZE   0x3CE78
+    #define MBED_RAM_START  0x200032F8/* 0x20003188 */
+    #define MBED_RAM_SIZE   0x3CD08/* 0x3CE78 */
   #else
     #define MBED_RAM_START  0x20000000
     #define MBED_RAM_SIZE   0x40000

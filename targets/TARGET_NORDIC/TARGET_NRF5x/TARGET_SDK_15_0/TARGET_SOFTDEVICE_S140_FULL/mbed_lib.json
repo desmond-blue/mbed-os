@@ -5,7 +5,7 @@
         "S140",
         "BLE_STACK_SUPPORT_REQD",
         "NRF_SDH_CLOCK_LF_XTAL_ACCURACY=7",
-        "NRF_SD_BLE_API_VERSION=5",
+        "NRF_SD_BLE_API_VERSION=6",
         "NRF_SDH_ENABLED=1",
         "NRF_SDH_BLE_ENABLED=1",
         "PEER_MANAGER_ENABLED=1",
