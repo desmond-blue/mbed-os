@@ -6537,12 +6537,7 @@
             "NORDIC",
             "NRF5x",
             "NRF52",
-<<<<<<< HEAD
-            "SDK_14_2",
-            "NORDIC_SOFTDEVICE",
-=======
             "SDK_15_0",
->>>>>>> First porting effort covered by JIRA IOTDEV-1572:
             "SOFTDEVICE_COMMON",
             "SOFTDEVICE_S132_FULL"
         ],
