@@ -229,7 +229,7 @@ ret_code_t nrf_sdh_enable_request(void)
         .accuracy     = NRF_SDH_CLOCK_LF_ACCURACY
     };
 
-    /* FIXME: This should be deleted when sd_state_evt_handler is ported. If not do this, softdevice is not able to enable*/
+    /* FIXME: This should be deleted when sd_state_evt_handler in nrfx clock is ported. If not do this, softdevice is not able to enable*/
 #ifdef SOFTDEVICE_PRESENT
     NVIC_DisableIRQ(POWER_CLOCK_IRQn);
 #endif
