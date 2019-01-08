@@ -489,6 +489,14 @@ uint32_t softdevice_enable(ble_enable_params_t * p_ble_enable_params)
     SD_HANDLER_LOG("sd_ble_enable: RAM START at 0x%x\r\n",
                     app_ram_base);
     err_code = sd_ble_enable(p_ble_enable_params, &app_ram_base);
+    if (app_ram_base != ram_start)
+    {
+        printf("sd_ble_enable: app_ram_base should be adjusted.\r\n");
+    }
+    else if (err_code != NRF_SUCCESS)
+    {
+        printf("sd_ble_enable: error 0x%x\r\n", err_code);
+    }
 
 #if defined(NRF_LOG_USES_RTT) && NRF_LOG_USES_RTT == 1
     if (app_ram_base != ram_start)

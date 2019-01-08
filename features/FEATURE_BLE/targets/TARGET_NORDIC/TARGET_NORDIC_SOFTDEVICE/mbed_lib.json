@@ -8,7 +8,7 @@
         },
         "peripheral_link_count": {
             "help": "When acting as BLE peripheral, how many centrals can we conenct to",
-            "value": "1",
+            "value": "2",
             "macro_name": "NRF_SDH_BLE_PERIPHERAL_LINK_COUNT"
         },
         "total_link_count": {
